@@ -1,7 +1,7 @@
-import { Box } from "@chakra-ui/react";
+
 
 function App() {
-  return <Box>Start Seite</Box>;
+  return <div>Test Deploy</div>
 }
 
 export default App;

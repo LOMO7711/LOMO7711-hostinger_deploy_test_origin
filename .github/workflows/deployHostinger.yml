@@ -1,0 +1,27 @@
+name: production
+on:
+  push:
+    branches:
+      - production
+jobs:
+  build:
+    runs-on: ["target-website-runner"]
+    steps:
+     - uses: actions/checkout@v4
+       with:
+         fetch-depth: 0
+         ref: main
+         submodules: false
+     - name: Install deps
+       run: npm ci
+     - name: Build HTML
+       run: npm run build
+     - name: Push To Hostinger-Repo
+       run: |
+          cd dist
+          git init
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy $(date +'%Y-%m-%d %H:%M:%S')"
+          git push --force ${{ secrets.HOSTINGER_REPO }} HEAD:main
