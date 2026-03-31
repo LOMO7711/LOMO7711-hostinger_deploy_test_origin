@@ -1,0 +1,12 @@
+{
+    "The field {field} is required": "The field {field} is required",
+    "The email is in an invalid_format": "The email is in an invalid_format",
+    "The field {field} must be at least {minimum} characters long": "The field {field} must be at least {minimum} characters long",
+    "The field {field} may contain a maximum of 5 characters": "The field {field} may contain a maximum of 5 characters",
+    "The field {field} cant be smaller then {minimum}": "The field {field} cant be smaller then {minimum}",
+    "The field {field} may cant be large then {maximum}": "The field {field} may cant be large then {maximum}",
+    "The Link has expired. Please register your Account again": "The Link has expired. Please register your Account again",
+    "The Link is invalid .Please register your Account again": "The Link is invalid .Please register your Account again",
+    "The E-Mail or the password is incorrect": "The E-Mail or the password is incorrect",
+    "age": "age"
+}
