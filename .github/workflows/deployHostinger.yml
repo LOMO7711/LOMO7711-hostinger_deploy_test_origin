@@ -18,7 +18,7 @@ jobs:
         run: npm run build
       - name: Push To Hostinger-Repo
         run: |
-          git clone https://${{ secrets.HOSTINGER_REPO }} deploy-repo
+          git clone ${{ secrets.HOSTINGER_REPO }} deploy-repo
           rm -rf deploy-repo/*
           cp -r dist/* deploy-repo/
           cd deploy-repo
