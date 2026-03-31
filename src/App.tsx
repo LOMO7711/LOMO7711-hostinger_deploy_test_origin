@@ -1,7 +1,26 @@
-
+import { useState } from "react";
 
 function App() {
-  return <div>Test Deploy 2</div>
+  const [counter, setCounter] = useState(0);
+  return (
+    <div>
+      <div>{counter}</div>
+      <button
+        onClick={function () {
+          setCounter((prev) => prev + 1);
+        }}
+      >
+        Increment
+      </button>
+      <button
+        onClick={function () {
+          setCounter((prev) => prev - 1);
+        }}
+      >
+        Decrement
+      </button>
+    </div>
+  );
 }
 
 export default App;
